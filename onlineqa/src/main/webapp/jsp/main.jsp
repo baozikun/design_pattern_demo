@@ -23,7 +23,11 @@
             <th>回答次数</th>
             <th>最后修改时间</th>
         </tr></thead>
-        <tbody></tbody>
+        <tbody>
+        <c:forEach items="${questions}" var="obj">
+
+        </c:forEach>
+        </tbody>
     </table>
 
 </div>
