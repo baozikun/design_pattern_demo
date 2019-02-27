@@ -3,6 +3,8 @@
 <mapper namespace="com.bz.mapper.QuestionsMapper" >
 
 
-
-
+    <select id="query" resultType="com.bz.pojo.Questions">
+     select title,answerCount,lastModified
+     from questions
+    </select>
 </mapper>

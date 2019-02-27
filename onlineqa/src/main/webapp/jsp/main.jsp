@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--
   Created by IntelliJ IDEA.
   User: 包子
@@ -24,8 +25,13 @@
             <th>最后修改时间</th>
         </tr></thead>
         <tbody>
-        <c:forEach items="${questions}" var="obj">
-
+        <c:forEach items="${questions}" var="obj" varStatus="status">
+           <tr>
+               <td>${status.index}</td>
+               <td>${obj.title}</td>
+               <td>${obj.answerCount}</td>
+               <td><fmt:formatDate value="${obj.lastModified}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate></td>
+           </tr>
         </c:forEach>
         </tbody>
     </table>
