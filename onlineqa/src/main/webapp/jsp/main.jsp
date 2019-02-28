@@ -11,11 +11,19 @@
 <html>
 <head>
     <title>Title</title>
+    <style>
+        table tbody tr:nth-of-type(odd){
+            background-color: green;
+        }
+        table thead tr:{
+            background-color: aqua;
+        }
+    </style>
 </head>
 <body>
 <div>
     <h1>在线问答</h1>
-    <div><a href="">我要提问</a></div>
+    <div><a href="${ctx}/jsp/question.jsp">我要提问</a></div>
     <table>
         <thead>
         <tr>
@@ -27,8 +35,8 @@
         <tbody>
         <c:forEach items="${questions}" var="obj" varStatus="status">
            <tr>
-               <td>${status.index}</td>
-               <td>${obj.title}</td>
+               <td>${status.index+1}</td>
+               <td><a href="#" <c:if test="${obj.answerCount eq 0}">style="color: red" </c:if>>${obj.title}</a></td>
                <td>${obj.answerCount}</td>
                <td><fmt:formatDate value="${obj.lastModified}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate></td>
            </tr>

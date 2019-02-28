@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface QuestionsService {
     List<Questions> queryAll();
+
+    boolean add(Questions questions);
 }

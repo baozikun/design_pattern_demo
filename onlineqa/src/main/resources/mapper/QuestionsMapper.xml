@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.bz.mapper.QuestionsMapper" >
-
+    <insert id="add">
+insert into questions
+    <trim prefix="(" prefixOverrides="," suffix=")">
+      <if test="title!=null and title!=''">
+          ,title
+      </if>
+        <if test="detailDesc!=null and detailDesc!=''">
+         ,detailDesc
+        </if>
+        <if test="answerCount!=null">
+            ,answerCount
+        </if>
+        <if test="lastModified!=null">
+            ,lastModified
+        </if>
+    </trim>
+        <trim prefix="values(" prefixOverrides="," suffix=")">
+            <if test="title!=null and title!=''">
+                ,#{title}
+            </if>
+            <if test="detailDesc!=null and detailDesc!=''">
+                ,#{detailDesc}
+            </if>
+            <if test="answerCount!=null">
+                ,#{answerCount}
+            </if>
+            <if test="lastModified!=null">
+                ,#{lastModified}
+            </if>
+        </trim>
+    </insert>
 
     <select id="query" resultType="com.bz.pojo.Questions">
      select title,answerCount,lastModified
