@@ -36,7 +36,7 @@
         <c:forEach items="${questions}" var="obj" varStatus="status">
            <tr>
                <td>${status.index+1}</td>
-               <td><a href="#" <c:if test="${obj.answerCount eq 0}">style="color: red" </c:if>>${obj.title}</a></td>
+               <td><a href="${ctx}/question/get/answers/${obj.id}" <c:if test="${obj.answerCount eq 0}">style="color: red" </c:if>>${obj.title}</a></td>
                <td>${obj.answerCount}</td>
                <td><fmt:formatDate value="${obj.lastModified}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate></td>
            </tr>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.bz.mapper.QuestionsMapper" >
+
     <insert id="add">
 insert into questions
     <trim prefix="(" prefixOverrides="," suffix=")">
@@ -34,7 +35,27 @@ insert into questions
     </insert>
 
     <select id="query" resultType="com.bz.pojo.Questions">
-     select title,answerCount,lastModified
+     select id,title,answerCount,lastModified
      from questions
+    </select>
+
+<resultMap id="answersSimpleMap" type="com.bz.pojo.Questions">
+    <id property="id" column="id"/>
+    <result property="title" column="title"/>
+    <result property="detailDesc" column="detailDesc"/>
+    <collection property="answers" ofType="com.bz.pojo.Answers">
+        <result property="ansContent" column="ansContent"/>
+        <result property="ansDate" column="ansDate"/>
+    </collection>
+
+</resultMap>
+
+    <select id="queryAnswers"  resultMap="answersSimpleMap">
+         SELECT t1.id,t1.title,t1.detailDesc,
+         t2.ansContent,t2.ansDate
+         FROM questions t1,answers t2
+         WHERE t1.id = t2.qid
+         AND t1.id = #{id}
+         ORDER BY t2.ansDate DESC ;
     </select>
 </mapper>

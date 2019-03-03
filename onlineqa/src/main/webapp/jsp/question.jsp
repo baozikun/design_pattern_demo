@@ -16,7 +16,7 @@
     <a href="/">返回首页</a>
 </div>
 <div>
-    <form action="${ctx}/question/add" method="post">
+    <form action="${ctx}/question/add/" method="post">
         问题： <input type="text" name="title"><br>
         问题描述： <textarea name="detailDesc"></textarea><br>
         <input type="submit" value="提交">

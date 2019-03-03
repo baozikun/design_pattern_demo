@@ -25,4 +25,10 @@ public class QuestionsServiceImpl implements QuestionsService {
         int i = questionsMapper.add(questions);
         return i==1?true:false ;
     }
+
+    @Override
+    public Questions queryAnswes(Long id) {
+        Questions questions = questionsMapper.queryAnswers(id);
+        return questions;
+    }
 }

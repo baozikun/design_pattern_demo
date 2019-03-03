@@ -55,7 +55,7 @@ public class Questions {
         return answers;
     }
 
-    public void setAnswers(List<Answers> ansrwers) {
+    public void setAnswers(List<Answers> answers) {
         this.answers = answers;
     }
 }

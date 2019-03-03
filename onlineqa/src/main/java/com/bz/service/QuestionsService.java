@@ -8,4 +8,6 @@ public interface QuestionsService {
     List<Questions> queryAll();
 
     boolean add(Questions questions);
+
+    Questions queryAnswes(Long id);
 }

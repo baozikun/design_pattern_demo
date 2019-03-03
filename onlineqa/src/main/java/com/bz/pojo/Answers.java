@@ -3,8 +3,8 @@ package com.bz.pojo;
 import java.util.Date;
 
 public class Answers {
-    private  Long id;
-    private  String ansContent;
+    private Long id;
+    private String ansContent;
     private Date ansDate;
     private Long qid;
     private Questions questions;
