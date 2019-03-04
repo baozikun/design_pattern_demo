@@ -52,8 +52,9 @@
     <div class="clearfix">
         <div class="left">我来回答</div>
         <div class="left">
-            <form action="" method="post">
-                <textarea name="ansContent"></textarea>
+            <form action="${ctx}/answer/add" method="post">
+                <input type="hidden" name="qid" value="${questions.id}">
+                <textarea name="ansContent"></textarea><br>
                 <input type="submit" value="提交答案"><br>
                 <a href="${ctx}/">返回首页</a>
             </form>

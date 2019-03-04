@@ -33,6 +33,15 @@ insert into questions
             </if>
         </trim>
     </insert>
+    <update id="updateAnsCountPlusOne">
+        update questions
+        <set>
+            answerCount = answerCount + 1
+        </set>
+         <where>
+             id = #{qid}
+         </where>
+    </update>
 
     <select id="query" resultType="com.bz.pojo.Questions">
      select id,title,answerCount,lastModified
@@ -57,5 +66,10 @@ insert into questions
          WHERE t1.id = t2.qid
          AND t1.id = #{id}
          ORDER BY t2.ansDate DESC ;
+    </select>
+    <select id="queryWithoutAnswers" resultType="com.bz.pojo.Questions">
+         SELECT id,title,detailDesc
+         FROM questions
+         WHERE id = #{id}
     </select>
 </mapper>

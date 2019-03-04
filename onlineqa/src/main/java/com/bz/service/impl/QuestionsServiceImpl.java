@@ -29,6 +29,11 @@ public class QuestionsServiceImpl implements QuestionsService {
     @Override
     public Questions queryAnswes(Long id) {
         Questions questions = questionsMapper.queryAnswers(id);
-        return questions;
+        if(questions!=null){
+            return questions;
+        }else{
+            return questionsMapper.queryWithoutAnswers(id);
+        }
+
     }
 }

@@ -3,6 +3,29 @@
 <mapper namespace="com.bz.mapper.AnswersMapper" >
 
 
-
-
+    <insert id="add">
+       insert into answers
+       <trim prefix="(" prefixOverrides="," suffix=")">
+           <if test="ansContent!=null and ansContent!=''">
+               ,ansContent
+           </if>
+           <if test="ansDate!=null ">
+               ,ansDate
+           </if>
+           <if test="qid!=null ">
+               ,qid
+           </if>
+       </trim>
+        <trim prefix="values(" prefixOverrides="," suffix=")">
+            <if test="ansContent!=null and ansContent!=''">
+                ,#{ansContent}
+            </if>
+            <if test="ansDate!=null ">
+                ,#{ansDate}
+            </if>
+            <if test="qid!=null ">
+                ,#{qid}
+            </if>
+        </trim>
+    </insert>
 </mapper>

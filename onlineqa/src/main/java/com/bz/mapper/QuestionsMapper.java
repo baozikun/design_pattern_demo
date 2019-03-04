@@ -13,4 +13,10 @@ public interface QuestionsMapper {
     List<Questions> query();
 
     Questions queryAnswers(@Param("id") Long id);
+
+    Questions queryWithoutAnswers(@Param("id") Long id);
+
+    int updateAnsCountPlusOne(@Param("qid") Long qid);
+
+
 }
