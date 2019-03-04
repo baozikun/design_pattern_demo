@@ -6,19 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b1f34dd-11ad-414f-b8a1-9799e38ec83f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/findDetail.jsp" afterDir="false" />
+    <list default="true" id="9b1f34dd-11ad-414f-b8a1-9799e38ec83f" name="Default Changelist" comment="新功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bz/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bz/controller/QuestionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bz/mapper/QuestionsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bz/mapper/QuestionsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bz/pojo/Answers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bz/pojo/Answers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bz/pojo/Questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bz/pojo/Questions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bz/service/QuestionsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bz/service/QuestionsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bz/service/impl/QuestionsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bz/service/impl/QuestionsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/QuestionsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/QuestionsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/question.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/question.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -63,7 +52,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/QuestionsMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
+            <state relative-caret-position="396">
               <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
               <folding>
                 <element signature="n#insert#0;n#mapper#0;n#!!top" />
@@ -379,7 +368,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551618648436" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551621483545" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -514,7 +503,7 @@
       <workItem from="1551273843552" duration="4618000" />
       <workItem from="1551278649149" duration="1416000" />
       <workItem from="1551358422873" duration="5529000" />
-      <workItem from="1551574906293" duration="19356000" />
+      <workItem from="1551574906293" duration="19390000" />
     </task>
     <task id="LOCAL-00001" summary="测试git">
       <created>1551190359041</created>
@@ -558,11 +547,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551366497577</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="新功能">
+      <created>1551621482618</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1551621482618</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36063000" />
+    <option name="totallyTimeSpent" value="36097000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -578,7 +574,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.35679215" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.36006546" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.36006546" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -870,7 +866,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/QuestionsMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
+        <state relative-caret-position="396">
           <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
           <folding>
             <element signature="n#insert#0;n#mapper#0;n#!!top" />
