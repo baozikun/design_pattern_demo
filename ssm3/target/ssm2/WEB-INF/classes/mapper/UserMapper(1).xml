@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bz.mapper.UserMapper" >
+<select id="query" resultType="com.bz.pojo.User">
+    SELECT * FROM edoc_user
+    <where>
+        username = #{username} and password = #{password}
+    </where>
+</select>
+
+<insert id="add">
+    insert into edoc_user
+    <trim prefix="(" suffix=")" prefixOverrides=",">
+        <if test="username !=null and username !=''">
+            ,username
+        </if>
+        <if test="password !=null and password !=''">
+            ,password
+        </if>
+    </trim>
+    <trim prefix="values(" prefixOverrides="," suffix=")">
+        <if test="username !=null and username !=''">
+            ,#{username}
+        </if>
+        <if test="password !=null and password !=''">
+            ,#{password}
+        </if>
+    </trim>
+</insert>
+</mapper>
